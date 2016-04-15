@@ -2,8 +2,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Alfiyan's Github Site</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
 </head>
 <body>
 <div>こんにちは！</div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/K90LRKFJ-x4?autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+<iframe id="video" src="https://www.youtube.com/embed/videoseries?list=PLJRjwgdp4IiktyTNwYLfRFF8HyQVIAlvv&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+<script>
+$(function(){
+  $('#video').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
+
+  $(window).resize(function(){
+    $('#video').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
+  });
+});
+
+</script>
 </body>
